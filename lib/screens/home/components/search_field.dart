@@ -4,8 +4,6 @@ import 'package:umart/constants.dart';
 import 'package:umart/screens/home/components/icon_button_with_counter.dart';
 import 'package:umart/size_config.dart';
 
-
-
 class SearchField extends StatelessWidget {
   const SearchField({
     Key? key,
@@ -14,7 +12,7 @@ class SearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: 50,
       width: SizeConfig.screenWidth * 0.6,
       // color: Colors.black,
       decoration: BoxDecoration(
@@ -29,7 +27,7 @@ class SearchField extends StatelessWidget {
           enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,
           hintText: "Search Product",
-          prefixIcon: Icon(Icons.search, color: kPrimaryColor),
+          prefixIcon:const Icon(Icons.search, color: kPrimaryColor),
           contentPadding: EdgeInsets.symmetric(
             horizontal: getProportionateScreenWidth(5),
             vertical: getProportionateScreenWidth(10),

@@ -6,8 +6,6 @@ import 'package:umart/screens/home/components/icon_button_with_counter.dart';
 import 'package:umart/screens/home/components/search_field.dart';
 import 'package:umart/size_config.dart';
 
-
-
 //Discount header on the App Dashboard page
 class DiscountBanner extends StatelessWidget {
   const DiscountBanner({
@@ -29,7 +27,7 @@ class DiscountBanner extends StatelessWidget {
       child: Text.rich(
         TextSpan(
           text: "A Summer Surprise\n",
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
           children: [
             TextSpan(
               text: "Cashback 20%",

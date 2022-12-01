@@ -23,10 +23,10 @@ class SizeConfig {
 // use to get the estimate height/spacing of the widget wrt to the screen size
 double getProportionateScreenHeight(double inputHeight) {
   double screenHeight = SizeConfig.screenHeight;
-  // 812 is the layout height that was used in the design
+  // 812 is the layout height that was used in the design  
+   return (inputHeight / 812.0) * screenHeight;
   
-  return (inputHeight / 812.0) * screenHeight;
-   // return (inputHeight / MediaQuery.of(context).size.height) * screenHeight;
+  //return (inputHeight / MediaQuery.of(context).size.height!) * screenHeight;
 }
 
 // use to get the estimate width of the widget wrt to the screen size
