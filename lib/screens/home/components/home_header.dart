@@ -1,16 +1,9 @@
-
-
-
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:umart/constants.dart';
 import 'package:umart/screens/home/components/icon_button_with_counter.dart';
 import 'package:umart/screens/home/components/search_field.dart';
 import 'package:umart/size_config.dart';
 
-
-
+//Class that holds the Seach field , notification bell and cart
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
     Key? key,

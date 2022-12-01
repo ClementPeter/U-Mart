@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:umart/screens/complete_profle/components/body.dart';
 import 'package:umart/size_config.dart';
 
-//Splash Screen of the App
+//Complete Profile Screen of the App : Where more info is collected
 class CompleteProfileScreen extends StatelessWidget {
   static String routeName =
       "/complete_profile"; //Static helps us to call this property without creating an instance of the object
@@ -21,7 +21,7 @@ class CompleteProfileScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Body(),
+      body: const Body(),
     );
   }
 }

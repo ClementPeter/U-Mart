@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:umart/screens/sign_up/components/body.dart';
 
+//Sign Up UI
 class SignUpScreeen extends StatelessWidget {
   const SignUpScreeen({Key? key}) : super(key: key);
 
@@ -17,7 +18,7 @@ class SignUpScreeen extends StatelessWidget {
         centerTitle: true,
 
       ),
-      body: Body(),
+      body:  const  Body(),
     );
   }
 }

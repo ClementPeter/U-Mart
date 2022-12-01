@@ -4,7 +4,6 @@ import 'package:umart/components/default_button.dart';
 import 'package:umart/components/form_error.dart';
 import 'package:umart/constants.dart';
 import 'package:umart/screens/complete_profle/complete_profile.dart';
-import 'package:umart/screens/login_success/login_success.dart';
 
 import '../../../size_config.dart';
 
@@ -20,7 +19,7 @@ class _SignUpFormState extends State<SignUpForm> {
   //Sign Up screen input variables- Email, Password ,Confirm Password
   String? email;
   String? password;
-  String? confirm_Password;
+  String? confirmPassword;
   //
   bool? remember = false; // Controlling check box state
   final List<String?> errors = []; //Add Form Error to list and display in UI
@@ -146,14 +145,14 @@ class _SignUpFormState extends State<SignUpForm> {
   TextFormField buildConfirmPasswordFormField() {
     return TextFormField(
       //obscureText: true,
-      onSaved: (newValue) => confirm_Password = newValue,
+      onSaved: (newValue) => confirmPassword = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
           removeError(error: kPassNullError);
-        } else if (value.isNotEmpty && password == confirm_Password) {
+        } else if (value.isNotEmpty && password == confirmPassword) {
           removeError(error: kMatchPassError);
         }
-        confirm_Password = value;
+        confirmPassword = value;
       },
       validator: (value) {
         if (value!.isEmpty) {
@@ -165,9 +164,6 @@ class _SignUpFormState extends State<SignUpForm> {
         }
         return null;
       },
-      // onEditingComplete: (){
-
-      // },
       decoration: const InputDecoration(
         labelText: "Confirm Password",
         labelStyle: TextStyle(color: kPrimaryColor),

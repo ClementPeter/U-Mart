@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import 'package:umart/size_config.dart';
 
+//Builds the category card
 class Categories extends StatelessWidget {
   Categories({super.key});
 
@@ -40,7 +40,7 @@ class Categories extends StatelessWidget {
         //   text: categories[3]["text"],
         //   press: (() {}),
         // ),
-
+        //But this way is more Efficient
         ...List.generate(
           categories.length,
           (index) => CategoriesCard(
@@ -53,16 +53,14 @@ class Categories extends StatelessWidget {
   }
 }
 
+//Structures thae Individual Category Card
 class CategoriesCard extends StatelessWidget {
   const CategoriesCard({
     Key? key,
-    // required this.categories,
     required this.text,
     required this.icon,
     required this.press,
   }) : super(key: key);
-
-  //final List<Map<String, dynamic>> categories;
 
   final GestureTapCallback press;
   final String text, icon;
@@ -78,12 +76,13 @@ class CategoriesCard extends StatelessWidget {
             AspectRatio(
               aspectRatio: 1,
               child: Container(
-                  padding: EdgeInsets.all(getProportionateScreenWidth(15)),
-                  decoration: BoxDecoration(
-                    color: const Color(0XFFFFECDF),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: SvgPicture.asset(icon)),
+                padding: EdgeInsets.all(getProportionateScreenWidth(15)),
+                decoration: BoxDecoration(
+                  color: const Color(0XFFFFECDF),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: SvgPicture.asset(icon),
+              ),
             ),
             const SizedBox(height: 5),
             Text(text)

@@ -4,11 +4,8 @@ import 'package:umart/components/default_button.dart';
 import 'package:umart/components/form_error.dart';
 import 'package:umart/constants.dart';
 import 'package:umart/screens/forgot_password/forgot_password.dart';
-import 'package:umart/screens/home/home_screen.dart';
 import 'package:umart/screens/login_success/login_success.dart';
 import 'package:umart/size_config.dart';
-import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({Key? key}) : super(key: key);
@@ -84,7 +81,8 @@ class _SignInFormState extends State<SignInForm> {
           DefaultButton(
             text: "Continue",
             press: () {
-              // Navigator.pushNamed(context, HomeScreen.routeName);
+              Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen

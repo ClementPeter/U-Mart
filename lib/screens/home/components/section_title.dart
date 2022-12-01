@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:umart/screens/home/components/categories.dart';
-
-import 'package:umart/screens/home/components/discount_banner.dart';
-import 'package:umart/screens/home/components/home_header.dart';
-
 import 'package:umart/size_config.dart';
 
+//Class that build the tile : Popular Places              see more
 class SectionTile extends StatelessWidget {
   const SectionTile({
     Key? key,
@@ -31,7 +27,7 @@ class SectionTile extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          GestureDetector(onTap: press, child: Text("See More")),
+          GestureDetector(onTap: press, child: const Text("See More")),
         ],
       ),
     );

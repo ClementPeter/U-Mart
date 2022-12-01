@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:umart/components/default_button.dart';
 import 'package:umart/size_config.dart';
-
 import '../../home/home_screen.dart';
 
 class Body extends StatelessWidget {
@@ -10,7 +9,6 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      //mainAxisAlignment: MainAxisAlignment.center
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(height: SizeConfig.screenHeight * 0.04),
@@ -18,7 +16,6 @@ class Body extends StatelessWidget {
           child: Image.asset(
             "assets/images/success.png",
             fit: BoxFit.contain,
-
             height: SizeConfig.screenHeight * 0.5, //40% of the screen
           ),
         ),

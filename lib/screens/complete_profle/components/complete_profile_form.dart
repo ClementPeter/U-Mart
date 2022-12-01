@@ -3,12 +3,10 @@ import 'package:umart/components/custom_suffix_icon.dart';
 import 'package:umart/components/default_button.dart';
 import 'package:umart/components/form_error.dart';
 import 'package:umart/constants.dart';
-import 'package:umart/screens/complete_profle/complete_profile.dart';
-import 'package:umart/screens/login_success/login_success.dart';
 import 'package:umart/screens/otp/otp_screen.dart';
-
 import '../../../size_config.dart';
 
+//Contains all the textfiled and validation stuff for complete profile screen
 class CompleteProfileForm extends StatefulWidget {
   const CompleteProfileForm({super.key});
 
@@ -24,8 +22,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
   String? lastName;
   String? address;
   String? phoneNumber;
-  //
-  //bool? remember = false; // Controlling check box state
+
   final List<String?> errors = []; //Add Form Error to list and display in UI
 
   //Add Individual errors  to Empty list
@@ -113,19 +110,6 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
     return TextFormField(
       keyboardType: TextInputType.emailAddress,
       onSaved: (newValue) => lastName = newValue,
-      // onChanged: (value) {
-      //   if (value.isNotEmpty) {
-      //     removeError(error: kNamelNullError);
-      //   }
-      //   return null;
-      // },
-      // validator: (value) {
-      //   if (value!.isEmpty) {
-      //     addError(error: kNamelNullError);
-      //     return "";
-      //   }
-      //   return null;
-      // },
       decoration: const InputDecoration(
         labelText: "Last Name",
         hintText: "Enter your last name",

@@ -1,19 +1,10 @@
  import 'package:flutter/material.dart';
 import 'package:umart/constants.dart';
 import 'package:umart/models/product.dart';
-import 'package:umart/screens/home/components/categories.dart';
-
-import 'package:umart/screens/home/components/discount_banner.dart';
-import 'package:umart/screens/home/components/home_header.dart';
-import 'package:umart/screens/home/components/section_title.dart';
-import 'package:umart/screens/home/components/special_offers.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:umart/size_config.dart';
 
-
-
-
+//Structure for Indicidual ProjectCards on the App Home Screen /Dashboard
 class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
@@ -23,7 +14,6 @@ class ProductCard extends StatelessWidget {
   }) : super(key: key);
 
   final double width, aspectRatio;
-
   final Product product;
 
   @override
@@ -82,8 +72,8 @@ class ProductCard extends StatelessWidget {
                     child: SvgPicture.asset(
                       "assets/icons/Heart Icon_2.svg",
                       color: product.isFavourite
-                          ? Color(0XFFFF4848)
-                          : Color(0XFFDBDEE4),
+                          ? const Color(0XFFFF4848)
+                          : const Color(0XFFDBDEE4),
                     ),
                   )
                 ],

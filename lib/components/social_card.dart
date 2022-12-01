@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:umart/size_config.dart';
 
+//Builds Social handle login UI
 class SocalCard extends StatelessWidget {
   const SocalCard({
     Key? key,

@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:umart/components/custom_suffix_icon.dart';
 import 'package:umart/components/default_button.dart';
 import 'package:umart/components/form_error.dart';
-import 'package:umart/components/no_account_text.dart';
 import 'package:umart/screens/login_success/login_success.dart';
 import 'package:umart/size_config.dart';
 
 import '../../../constants.dart';
 
+//Builds the Form  for forgot password UI
+
 class ForgotPasswordForm extends StatefulWidget {
   const ForgotPasswordForm({Key? key}) : super(key: key);
-
   @override
   State<ForgotPasswordForm> createState() => _ForgotPasswordFormState();
 }
@@ -74,10 +74,8 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
               suffixIcon: CustomSuffixIcon(svgIcon: "assets/icons/Mail.svg"),
             ),
           ),
-          //SizedBox(height: getProportionateScreenHeight(10)),
           FormError(errors: errors), //Displays form Error as a ui widget
           SizedBox(height: SizeConfig.screenHeight * 0.1),
-          //SizedBox(height: getProportionateScreenHeight(8)),
           DefaultButton(
             text: "Continue",
             press: () {

@@ -3,6 +3,7 @@ import 'package:umart/screens/sign_up/sign_up_screen.dart';
 import '../constants.dart';
 import '../size_config.dart';
 
+//widgets that shoes Dont have an account on Auth Screens
 class NoAccountText extends StatelessWidget {
   const NoAccountText({
     Key? key,

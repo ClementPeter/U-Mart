@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:umart/constants.dart';
 import 'package:umart/size_config.dart';
 
-//Class that contains the default button - used in splash
+//Class that contains the default Continue button  useds in splash , and all auth screens and OTP screen
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
     Key? key,
@@ -20,9 +20,10 @@ class DefaultButton extends StatelessWidget {
       height: getProportionateScreenHeight(50),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          primary: kPrimaryColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          backgroundColor: kPrimaryColor,
         ),
         onPressed: press as void Function()?,
         child: Text(

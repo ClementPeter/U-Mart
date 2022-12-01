@@ -8,7 +8,7 @@ class FormError extends StatelessWidget {
   const FormError({Key? key, required this.errors}) : super(key: key);
 
   final List<String?>
-      errors; //we pass the list our empty list error on every page we need it to show ; meainig we can have more than 1 error underenath the textfield
+      errors; //we pass the list our empty list error on every page we need it to show ; meaning we can have more than 1 error underenath the textfield
 
   @override
   Widget build(BuildContext context) {

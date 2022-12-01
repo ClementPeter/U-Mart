@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:umart/screens/home/components/categories.dart';
-
-import 'package:umart/screens/home/components/discount_banner.dart';
-import 'package:umart/screens/home/components/home_header.dart';
 import 'package:umart/screens/home/components/section_title.dart';
-
 import 'package:umart/size_config.dart';
 
-
-
+// Special OFfer Layout
 class SpecialOffers extends StatelessWidget {
   const SpecialOffers({
     Key? key,
@@ -50,6 +44,7 @@ class SpecialOffers extends StatelessWidget {
   }
 }
 
+//Class that builds individual SpecialOfferCards
 class SpecialOfferCard extends StatelessWidget {
   const SpecialOfferCard({
     Key? key,
@@ -84,8 +79,8 @@ class SpecialOfferCard extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color(0xFF343434).withOpacity(0.4),
-                      Color(0xFF343434).withOpacity(0.15),
+                      const Color(0xFF343434).withOpacity(0.4),
+                      const Color(0xFF343434).withOpacity(0.15),
                     ],
                   ),
                 ),

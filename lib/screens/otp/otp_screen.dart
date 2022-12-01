@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:umart/size_config.dart';
 import 'package:umart/screens/otp/components/body.dart';
 
+//OTP UI
 class OTPScreen extends StatelessWidget {
   const OTPScreen({Key? key}) : super(key: key);
   static String routeName = "/otp";
@@ -18,7 +19,7 @@ class OTPScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Body(),
+      body: const Body(),
     );
   }
 }
