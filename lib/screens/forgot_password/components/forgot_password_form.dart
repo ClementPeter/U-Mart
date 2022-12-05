@@ -79,11 +79,12 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
           DefaultButton(
             text: "Continue",
             press: () {
+              Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
                 // KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
           ),

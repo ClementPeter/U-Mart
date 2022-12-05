@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:umart/size_config.dart';
 
 //Class that build the tile : Popular Places              see more
-class SectionTile extends StatelessWidget {
-  const SectionTile({
+class SectionTitle extends StatelessWidget {
+  const SectionTitle({
     Key? key,
     required this.text,
     required this.press,
@@ -27,7 +27,15 @@ class SectionTile extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          GestureDetector(onTap: press, child: const Text("See More")),
+          GestureDetector(
+            onTap: press,
+            child: const Text(
+              "See More",
+              style: TextStyle(
+                color: Color(0xFFBBBBBB),
+              ),
+            ),
+          ),
         ],
       ),
     );

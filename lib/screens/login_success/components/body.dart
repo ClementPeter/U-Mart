@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:umart/components/default_button.dart';
+import 'package:umart/screens/details/details_screen.dart';
 import 'package:umart/size_config.dart';
 import '../../home/home_screen.dart';
 

@@ -35,6 +35,7 @@ class _OTPformState extends State<OTPform> {
 
   //Function to check request the current focus of the textForm field
   void nextField(String value, FocusNode? focusNode) {
+    //if any number get entered value.lenght equals thus the focus Node should shift 
     if (value.length == 1) {
       focusNode!.requestFocus();
     }
@@ -59,6 +60,7 @@ class _OTPformState extends State<OTPform> {
                   style: const TextStyle(fontSize: 24),
                   decoration: otpInputDecoration,
                   onChanged: ((value) {
+                    print(":::::::::::::::::::::::::::::::$value");
                     nextField(value, pin2FocusNode);
                   }),
                 ),

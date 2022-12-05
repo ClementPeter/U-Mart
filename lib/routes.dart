@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:umart/screens/complete_profle/complete_profile.dart';
+import 'package:umart/screens/details/details_screen.dart';
 import 'package:umart/screens/forgot_password/forgot_password.dart';
 import 'package:umart/screens/home/home_screen.dart';
 import 'package:umart/screens/login_success/login_success.dart';
@@ -19,4 +20,5 @@ final Map<String, WidgetBuilder> routes = {
   CompleteProfileScreen.routeName: (context) => const CompleteProfileScreen(),
   OTPScreen.routeName: (context) => const OTPScreen(),
   HomeScreen.routeName: (context) => const HomeScreen(),
+  DetailsScreen.routeName: (context) => const DetailsScreen()
 };

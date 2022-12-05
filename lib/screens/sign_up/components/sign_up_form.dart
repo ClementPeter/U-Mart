@@ -59,12 +59,13 @@ class _SignUpFormState extends State<SignUpForm> {
           DefaultButton(
             text: "Continue",
             press: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                // if all are valid then go to success splash screen
-                //KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
-              }
+              Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+              // if (_formKey.currentState!.validate()) {
+              //   _formKey.currentState!.save();
+              //   // if all are valid then go to success splash screen
+              //   //KeyboardUtil.hideKeyboard(context);
+              //   Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+              // }
             },
           ),
         ],

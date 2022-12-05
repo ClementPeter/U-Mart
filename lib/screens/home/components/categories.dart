@@ -16,7 +16,7 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceAround, 
       children: [
         //Normally I would have done it like this
         // CategoriesCard(

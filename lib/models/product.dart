@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//Class that Structure Product Model and helps us access its properties 
+//Class that Structure Product Model and helps us access its properties
 class Product {
   final int id;
   final String title, description;
@@ -77,7 +77,7 @@ List<Product> demoProducts = [
     title: "Gloves XC Omega - Polygon",
     price: 36.55,
     description: description,
-    rating: 4.1,
+    rating: 4.2,
     isFavourite: true,
     isPopular: true,
   ),
@@ -95,8 +95,9 @@ List<Product> demoProducts = [
     title: "Logitech Head",
     price: 20.20,
     description: description,
-    rating: 4.1,
+    rating: 4.3,
     isFavourite: true,
+    isPopular: true,
   ),
 ];
 

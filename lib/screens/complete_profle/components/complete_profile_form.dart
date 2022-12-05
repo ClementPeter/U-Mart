@@ -64,12 +64,12 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
             press: () {
               Navigator.pushNamed(context, OTPScreen.routeName);
               // Navigator.pushNamed(context, HomeScreen.routeName);
-              if (_formKey.currentState!.validate()) {
-                // _formKey.currentState!.save();
-                // if all are valid then go to success screen
-                //KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, OTPScreen.routeName);
-              }
+              // if (_formKey.currentState!.validate()) {
+              //   // _formKey.currentState!.save();
+              //   // if all are valid then go to success screen
+              //   //KeyboardUtil.hideKeyboard(context);
+              //   // Navigator.pushNamed(context, OTPScreen.routeName);
+              // }
             },
           ),
         ],

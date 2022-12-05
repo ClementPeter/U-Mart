@@ -3,6 +3,7 @@ import 'package:umart/components/default_button.dart';
 import 'package:umart/screens/otp/components/otp_form.dart';
 import 'package:umart/size_config.dart';
 import '../../../constants.dart';
+import 'package:umart/screens/login_success/login_success.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -32,7 +33,9 @@ class Body extends StatelessWidget {
                 SizedBox(height: SizeConfig.screenHeight * 0.15),
                 DefaultButton(
                   text: "Continue",
-                  press: () {},
+                  press: () {
+                    Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                  },
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.15),
                 const Text(

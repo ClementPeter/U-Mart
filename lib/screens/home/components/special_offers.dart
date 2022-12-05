@@ -12,11 +12,12 @@ class SpecialOffers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SectionTile(
-          text: "Special for you",
-          press: () {},
+        Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: getProportionateScreenWidth(10),
+              vertical: getProportionateScreenHeight(10)),
+          child: SectionTitle(text: "Special for you", press: () {}),
         ),
-        SizedBox(height: getProportionateScreenHeight(10)),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
