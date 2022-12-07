@@ -10,8 +10,9 @@ class ProductCard extends StatelessWidget {
     Key? key,
     this.width = 140,
     this.aspectRatio = 1.25,
-    required this.product, required this.onpress,
-   // required this.onpress 
+    required this.product,
+    required this.onpress,
+    // required this.onpress
   }) : super(key: key);
 
   final double width, aspectRatio;

@@ -15,6 +15,7 @@ class LoginSuccessScreen extends StatelessWidget {
           'Login Success',
           style: TextStyle(fontFamily: "Muli"),
         ),
+        leading: const SizedBox(height: 50, width: 50),
         centerTitle: true,
       ),
       body: const Body(),

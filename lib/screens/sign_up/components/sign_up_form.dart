@@ -59,13 +59,13 @@ class _SignUpFormState extends State<SignUpForm> {
           DefaultButton(
             text: "Continue",
             press: () {
-              Navigator.pushNamed(context, CompleteProfileScreen.routeName);
-              // if (_formKey.currentState!.validate()) {
-              //   _formKey.currentState!.save();
-              //   // if all are valid then go to success splash screen
-              //   //KeyboardUtil.hideKeyboard(context);
-              //   Navigator.pushNamed(context, CompleteProfileScreen.routeName);
-              // }
+            //  Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+              if (_formKey.currentState!.validate()) {
+                _formKey.currentState!.save();
+                // if all are valid then go to success splash screen
+                //KeyboardUtil.hideKeyboard(context);
+                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+              }
             },
           ),
         ],
@@ -109,7 +109,7 @@ class _SignUpFormState extends State<SignUpForm> {
   // password textform field
   TextFormField buildPasswordFormField() {
     return TextFormField(
-      //obscureText: true,
+      obscureText: true,
       onSaved: (newValue) => password = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
@@ -145,7 +145,7 @@ class _SignUpFormState extends State<SignUpForm> {
   //confirm password textform field
   TextFormField buildConfirmPasswordFormField() {
     return TextFormField(
-      //obscureText: true,
+      obscureText: true,
       onSaved: (newValue) => confirmPassword = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
