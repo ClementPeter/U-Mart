@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:umart/routes.dart';
+import 'package:umart/screens/profile/profie_screen.dart';
 import 'package:umart/screens/splash/splash_screen.dart';
 import 'package:umart/theme.dart';
 
@@ -14,8 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'UMART',
-      theme: theme(),
-      initialRoute: SplashScreen.routeName,
+       theme: theme(),
+       initialRoute: SplashScreen.routeName,  
       routes: routes,
     );
   }

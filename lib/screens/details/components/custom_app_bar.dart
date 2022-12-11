@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:umart/components/rounded_icon_btn.dart';
 import 'package:umart/size_config.dart';
-import '../../../constants.dart';
-import '../../../models/product.dart';
 
+//Not used for UI beautification reasons
 class CustomAppBar extends StatelessWidget {
   // const CustomAppBar({Key? key}) : super(key: key);
   final double? rating;

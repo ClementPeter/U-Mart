@@ -4,7 +4,7 @@ import 'package:umart/size_config.dart';
 import '../../../constants.dart';
 import '../../../models/product.dart';
 
-
+//Shows a preview of Image and smaller views of product image
 class ProductImages extends StatefulWidget {
   const ProductImages({
     Key? key,
@@ -18,7 +18,7 @@ class ProductImages extends StatefulWidget {
 }
 
 class _ProductImagesState extends State<ProductImages> {
-  int selectedImage = 0;
+  int selectedImage = 0; //toggles individual image in products models
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,7 +27,10 @@ class _ProductImagesState extends State<ProductImages> {
           width: getProportionateScreenWidth(200),
           child: AspectRatio(
             aspectRatio: 1,
-            child: Image.asset(widget.product.images[selectedImage]),
+            child: Hero(
+              tag:widget.product.id.toString(),
+              child: Image.asset(widget.product.images[selectedImage]),
+            ),
           ),
         ),
         Row(
@@ -51,7 +54,8 @@ class _ProductImagesState extends State<ProductImages> {
           selectedImage = index;
         });
       },
-      child: Container(
+      child: AnimatedContainer(
+        duration: kAnimationDuration,
         margin: EdgeInsets.only(right: getProportionateScreenWidth(15)),
         padding: EdgeInsets.all(getProportionateScreenWidth(8)),
         height: getProportionateScreenHeight(48),

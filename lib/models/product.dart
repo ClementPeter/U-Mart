@@ -41,7 +41,10 @@ List<Product> demoProducts = [
     ],
     title: "Wireless Controller for PS4™",
     price: 64.99,
-    description: description,
+    description:
+        "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …",
+
+    //description: description,
     rating: 4.8,
     isFavourite: true,
     isPopular: true,
@@ -59,7 +62,8 @@ List<Product> demoProducts = [
     ],
     title: "Nike Sport White - Man Pant",
     price: 50.5,
-    description: description,
+    description:
+        "Unisex sport shorts made from premium clothing material to give comfort in all direction and keep you in control of your game",
     rating: 4.1,
     isPopular: true,
   ),
@@ -74,9 +78,10 @@ List<Product> demoProducts = [
       const Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Gloves XC Omega - Polygon",
+    title: "Matrix Cycling Gloves - BMX",
     price: 36.55,
-    description: description,
+    description:
+        "Keeping your hands dry and allow you to maintain a safe grip on the handlebars at all time despite weather conditions",
     rating: 4.2,
     isFavourite: true,
     isPopular: true,
@@ -92,14 +97,12 @@ List<Product> demoProducts = [
       const Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Logitech Head",
+    title: "Logitech Headset",
     price: 20.20,
-    description: description,
+    description:
+        " Wireless headsets from Logitech offer all the features of their wired counterparts along with the freedom to get up, stretch, and move around while still using…",
     rating: 4.3,
     isFavourite: true,
     isPopular: true,
   ),
 ];
-
-const String description =
-    "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:umart/components/custom_nav_bar.dart';
+import 'package:umart/enum.dart';
 import 'package:umart/size_config.dart';
 
 //import 'components/body.dart';
@@ -13,7 +15,8 @@ class HomeScreen extends StatelessWidget {
     SizeConfig()
         .init(context); //Size config must be called on every starting screen
     return const Scaffold(
-      body:  Body(),
+      body: Body(),
+      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
 }

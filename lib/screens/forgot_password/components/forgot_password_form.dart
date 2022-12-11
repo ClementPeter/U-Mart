@@ -39,6 +39,15 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
     }
   }
 
+  //Toggle the show password  field
+  bool isShowPassword = true;
+
+  showPassword() {
+    setState(() {
+      isShowPassword = !isShowPassword;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -66,12 +75,16 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
               }
               return null;
             },
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               labelText: "Email",
               labelStyle: TextStyle(color: kPrimaryColor),
               hintText: "Enter your Email",
               floatingLabelBehavior: FloatingLabelBehavior.always,
-              suffixIcon: CustomSuffixIcon(svgIcon: "assets/icons/Mail.svg"),
+              suffixIcon: InkWell(
+                borderRadius: BorderRadius.circular(30),
+                onTap: showPassword,
+                child: const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+              ),
             ),
           ),
           FormError(errors: errors), //Displays form Error as a ui widget

@@ -62,4 +62,3 @@ class IconButtonWithCounter extends StatelessWidget {
     );
   }
 }
-

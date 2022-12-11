@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:umart/components/rounded_icon_btn.dart';
-import 'package:umart/screens/details/components/product_image.dart';
-import 'package:umart/screens/details/components/top_rounded_container.dart';
 import 'package:umart/size_config.dart';
 import '../../../constants.dart';
 import '../../../models/product.dart';
 
+//Product description section dislayys: name, prioce , description
 class ProductDescription extends StatelessWidget {
   const ProductDescription({
     Key? key,
@@ -35,15 +33,17 @@ class ProductDescription extends StatelessWidget {
             margin: const EdgeInsets.only(right: 2),
             padding: EdgeInsets.all(getProportionateScreenWidth(8)),
             decoration: BoxDecoration(
-                color:
-                    product.isFavourite ? Color(0xFFFFE6E6) : Color(0xFFF5F6F9),
+                color: product.isFavourite
+                    ? const Color(0xFFFFE6E6)
+                    : const Color(0xFFF5F6F9),
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(20),
                     bottomLeft: Radius.circular(20))),
             child: SvgPicture.asset(
               "assets/icons/Heart Icon_2.svg",
-              color:
-                  product.isFavourite ? Color(0xFFFF4848) : Color(0xFFDBDEE4),
+              color: product.isFavourite
+                  ? const Color(0xFFFF4848)
+                  : const Color(0xFFDBDEE4),
             ),
           ),
         ),
@@ -106,9 +106,11 @@ class ProductDescription extends StatelessWidget {
             child: Row(
               children: const [
                 Text(
-                  "See More Detail",
+                  "See More...",
                   style: TextStyle(
-                      fontWeight: FontWeight.w600, color: kPrimaryColor),
+                    fontWeight: FontWeight.w600,
+                    color: kPrimaryColor,
+                  ),
                 ),
                 SizedBox(width: 5),
                 Icon(

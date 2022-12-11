@@ -4,7 +4,7 @@ import 'package:umart/size_config.dart';
 
 import '../../models/product.dart';
 
-//Forgot Password Screen
+//Details Screen - where the product content is shown
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({Key? key}) : super(key: key);
   static String routeName = "/details";

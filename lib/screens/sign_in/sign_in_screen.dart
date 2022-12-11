@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:umart/screens/sign_in/components/body.dart';
-//import 'package:umart/screens/splash/components/body.dart';
 import 'package:umart/size_config.dart';
 
 //Sign-In UI

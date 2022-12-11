@@ -30,9 +30,13 @@ class PopularProducts extends StatelessWidget {
                   return ProductCard(
                     product: demoProducts[index],
                     onpress: () {
-                      Navigator.pushNamed(context, DetailsScreen.routeName,
-                          arguments: ProductDetailsArguments(
-                              product: (demoProducts[index]),),);
+                      Navigator.pushNamed(
+                        context,
+                        DetailsScreen.routeName,
+                        arguments: ProductDetailsArguments(
+                          product: (demoProducts[index]),
+                        ),
+                      );
                     },
                   );
                 }

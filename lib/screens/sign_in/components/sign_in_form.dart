@@ -43,6 +43,15 @@ class _SignInFormState extends State<SignInForm> {
     }
   }
 
+  //Toggle the show password  field
+  bool isShowPassword = true;
+
+  showPassword() {
+    setState(() {
+      isShowPassword = !isShowPassword;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -152,12 +161,16 @@ class _SignInFormState extends State<SignInForm> {
         }
         return null;
       },
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         labelText: "Password",
         hintText: "Enter your password",
-        labelStyle: TextStyle(color: kPrimaryColor),
+        labelStyle: const TextStyle(color: kPrimaryColor),
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        suffixIcon: InkWell(
+          borderRadius: BorderRadius.circular(30),
+          onTap: showPassword,
+          child: const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        ),
       ),
     );
   }

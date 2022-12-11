@@ -42,6 +42,15 @@ class _SignUpFormState extends State<SignUpForm> {
     }
   }
 
+  //Toggle the show password  field
+  bool isShowPassword = true;
+
+  showPassword() {
+    setState(() {
+      isShowPassword = !isShowPassword;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -59,7 +68,7 @@ class _SignUpFormState extends State<SignUpForm> {
           DefaultButton(
             text: "Continue",
             press: () {
-            //  Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+              //  Navigator.pushNamed(context, CompleteProfileScreen.routeName);
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success splash screen
@@ -109,7 +118,7 @@ class _SignUpFormState extends State<SignUpForm> {
   // password textform field
   TextFormField buildPasswordFormField() {
     return TextFormField(
-      obscureText: true,
+      obscureText: isShowPassword,
       onSaved: (newValue) => password = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
@@ -132,12 +141,16 @@ class _SignUpFormState extends State<SignUpForm> {
       // onEditingComplete: (){
 
       // },
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         labelText: "Password",
-        labelStyle: TextStyle(color: kPrimaryColor),
+        labelStyle: const TextStyle(color: kPrimaryColor),
         hintText: "Enter your password",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        suffixIcon: InkWell(
+          borderRadius: BorderRadius.circular(30),
+          onTap: showPassword,
+          child: const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        ),
       ),
     );
   }
@@ -145,7 +158,7 @@ class _SignUpFormState extends State<SignUpForm> {
   //confirm password textform field
   TextFormField buildConfirmPasswordFormField() {
     return TextFormField(
-      obscureText: true,
+      obscureText: isShowPassword,
       onSaved: (newValue) => confirmPassword = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
@@ -165,12 +178,16 @@ class _SignUpFormState extends State<SignUpForm> {
         }
         return null;
       },
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         labelText: "Confirm Password",
-        labelStyle: TextStyle(color: kPrimaryColor),
+        labelStyle: const TextStyle(color: kPrimaryColor),
         hintText: "Re-enter your password",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        suffixIcon: InkWell(
+          borderRadius: BorderRadius.circular(30),
+          onTap: showPassword,
+          child: const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        ),
       ),
     );
   }
