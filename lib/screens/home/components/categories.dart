@@ -7,7 +7,7 @@ class Categories extends StatelessWidget {
   Categories({super.key});
 
   List<Map<String, dynamic>> categories = [
-    {"icon": "assets/icons/Flash Icon.svg", "text": "Flash Deal"},
+    {"icon": "assets/icons/Flash Icon.svg", "text": "Hot Deals"},
     {"icon": "assets/icons/Bill Icon.svg", "text": "Bills"},
     {"icon": "assets/icons/Gift Icon.svg", "text": "Daily Gift"},
     {"icon": "assets/icons/Discover.svg", "text": "More"},
@@ -16,7 +16,7 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround, 
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         //Normally I would have done it like this
         // CategoriesCard(
@@ -44,9 +44,10 @@ class Categories extends StatelessWidget {
         ...List.generate(
           categories.length,
           (index) => CategoriesCard(
-              text: categories[index]["text"],
-              icon: categories[index]["icon"],
-              press: () {}),
+            text: categories[index]["text"],
+            icon: categories[index]["icon"],
+            press: () {},
+          ),
         )
       ],
     );
