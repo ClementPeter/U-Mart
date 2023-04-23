@@ -52,7 +52,7 @@ class Categories extends StatelessWidget {
       ],
     );
   }
-}
+} 
 
 //Structures the Individual Category Card
 class CategoriesCard extends StatelessWidget {
