@@ -33,12 +33,20 @@ class _OTPformState extends State<OTPform> {
     pin4FocusNode!.dispose();
   }
 
-  //Function to check request the current focus of the textForm field
+  //Function to check for the current focus of the textForm field and move the focus to the next field
   void nextField(String value, FocusNode? focusNode) {
     //if any number get entered value.lenght equals thus the focus Node should shift 
     if (value.length == 1) {
       focusNode!.requestFocus();
     }
+  }
+
+  //Logic to go to previous Focus Node - Used for deleting the number 
+  void previousField(String value, FocusNode? focusNode){
+
+    //if
+
+
   }
 
   @override

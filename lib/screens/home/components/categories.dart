@@ -54,7 +54,7 @@ class Categories extends StatelessWidget {
   }
 }
 
-//Structures thae Individual Category Card
+//Structures the Individual Category Card
 class CategoriesCard extends StatelessWidget {
   const CategoriesCard({
     Key? key,
