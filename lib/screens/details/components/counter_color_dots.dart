@@ -4,6 +4,7 @@ import 'package:umart/size_config.dart';
 import '../../../constants.dart';
 import '../../../models/product.dart';
 
+//color seclector on detail page
 class ColorDots extends StatefulWidget {
   const ColorDots({
     Key? key,
@@ -46,7 +47,7 @@ class _ColorDotsState extends State<ColorDots> {
           SizedBox(width: getProportionateScreenWidth(10)),
           Text(
             "$_counter",
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           SizedBox(width: getProportionateScreenWidth(10)),
           RoundedIconBtn(
@@ -81,7 +82,7 @@ class _ColorDotsState extends State<ColorDots> {
             color:
                 isSelectedColor == index ? kPrimaryColor : Colors.transparent,
           ),
-          shape: BoxShape.circle,
+          //shape: BoxShape.circle,
         ),
         child: DecoratedBox(
           decoration: BoxDecoration(

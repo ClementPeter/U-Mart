@@ -43,8 +43,6 @@ List<Product> demoProducts = [
     price: 64.99,
     description:
         "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …",
-
-    //description: description,
     rating: 4.8,
     isFavourite: true,
     isPopular: true,

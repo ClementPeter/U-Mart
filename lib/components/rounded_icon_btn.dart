@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import '../size_config.dart';
 
+//Custom Round button - used in detail section for product increment and decrement
 class RoundedIconBtn extends StatelessWidget {
   const RoundedIconBtn({
     Key? key,

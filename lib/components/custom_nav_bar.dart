@@ -5,6 +5,7 @@ import 'package:umart/enum.dart';
 import 'package:umart/screens/home/home_screen.dart';
 import 'package:umart/screens/profile/profie_screen.dart';
 
+//Custom implementation of BottomNavBar - Not the best approach cos it stacks screen ontop themselves
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
     Key? key,

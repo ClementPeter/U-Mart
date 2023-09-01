@@ -4,7 +4,7 @@ import 'package:umart/models/product.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:umart/size_config.dart';
 
-//Widget Structure for Individual ProjectCards on the App Home Screen /Dashboard
+//Widget Structure for Individual ProjectCards on the App Home Screen / Dashboard
 class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
@@ -44,8 +44,9 @@ class ProductCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Hero(
-                      tag: product.id.toString(),
-                      child: Image.asset(product.images[0])),
+                    tag: product.id.toString(),
+                    child: Image.asset(product.images[0]),
+                  ),
                 ),
               ),
               Text(

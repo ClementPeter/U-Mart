@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:umart/constants.dart';
 import 'package:umart/size_config.dart';
 
-//Class that contains the default Continue button  useds in splash , and all auth screens and OTP screen
+//Class that contains the default "Continue" button used in splash, and all auth screens and OTP screen
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
     Key? key,
